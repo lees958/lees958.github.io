@@ -1,1 +1,35 @@
+<!DOCTYPE html>
 <html>
+<head>
+<style> 
+div {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    position: relative;
+    -webkit-animation: mymove 3s;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 3; /* Safari 4.0 - 8.0 */
+    animation: mymove 3s;
+    animation-iteration-count: 3;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+}
+
+@keyframes mymove {
+    from {top: 0px;}
+    to {top: 200px;}
+}
+</style>
+</head>
+<body>
+
+<p>ANIMATION 2 </p>
+<p><strong>Moving downside</strong></p>
+<div></div>
+
+</body>
+</html>
