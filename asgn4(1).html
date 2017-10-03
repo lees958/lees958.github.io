@@ -10,18 +10,30 @@ div {
 }
 
 div:hover {
-    width: 300px;
+    width: 200px;
 }
 
 input[type=text] {
-  width: 100px;
+  width: 50px;
   -webkit-transition: width .35s ease-in-out;
   transition: width .35s ease-in-out;
 }
 input[type=text]:focus {
   width: 250px;
 }
-
+four {
+    top: 100px;
+    left: 100px;
+    background-color: red;
+}
+ square {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+div {
+    display: block;
+}
 </style>
 </head>
 <body>
@@ -32,8 +44,16 @@ input[type=text]:focus {
 
 <p><b> A reaction to Mouse click </b></p>
 
+<div class="testdiv"> </div>
+<div class="container">
+    <div class="one square"></div>
+    <div class="two square"></div>
+    <div class="three square"></div>
+    <div class="four square"></div>
+</div>
 Search: <input type="text" name="search">
-
-
+<div class="textdiv"></div>
+<div class="five triangle"></div>
+<div class="textdiv"></div>
 </body>
 </html>
