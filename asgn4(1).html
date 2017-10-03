@@ -10,17 +10,30 @@ div {
 }
 
 div:hover {
-    width: 500px;
+    width: 300px;
 }
+
+input[type=text] {
+  width: 100px;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+}
+input[type=text]:focus {
+  width: 250px;
+}
+
 </style>
 </head>
 <body>
 
-<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+<p><b> A reaction to Mouse-over </b></p>
 
 <div></div>
 
-<p>Hover over the div element above, to see the transition effect.</p>
+<p><b> A reaction to Mouse click </b></p>
+
+Search: <input type="text" name="search">
+
 
 </body>
 </html>
