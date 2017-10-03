@@ -1,16 +1,19 @@
 <html>
 <head>
 <style> 
+
 div {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     background: pink;
+    -webkit-transition: width 3s; 
+    -webkit-transition-timing-function: linear; /* Safari */
     transition: width 2s;
-    -webkit-transition: width 2s;
+    transition-timing-function: linear;
 }
 
 div:hover {
-    width: 200px;
+    width: 300px;
 }
 
 input[type=text] {
@@ -21,16 +24,7 @@ input[type=text] {
 input[type=text]:focus {
   width: 250px;
 }
-four {
-    top: 100px;
-    left: 100px;
-    background-color: red;
-}
- square {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-}
+
 div {
     display: block;
 }
@@ -38,22 +32,13 @@ div {
 </head>
 <body>
 
-<p><b> A reaction to Mouse-over </b></p>
-
 <div></div>
 
-<p><b> A reaction to Mouse click </b></p>
+<p><b> A reaction to Mouse over and click </b></p>
 
 <div class="testdiv"> </div>
-<div class="container">
-    <div class="one square"></div>
-    <div class="two square"></div>
-    <div class="three square"></div>
-    <div class="four square"></div>
-</div>
+<p><b> Click next to Search! </b></p>
 Search: <input type="text" name="search">
-<div class="textdiv"></div>
-<div class="five triangle"></div>
-<div class="textdiv"></div>
+
 </body>
 </html>
