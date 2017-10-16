@@ -21,23 +21,24 @@
 </head>
 <body>
  
-  <h3>Example 1</h3>
+  <h3><center>An element that is created or removed after user does something</center></h3>
   <div class="example1">
     <span id="result">&nbsp;</span>
-    <div style="background-color:blue;"></div>
-    <div style="background-color:rgb(15,99,30);"></div>
-    <div style="background-color:#123456;"></div>
-    <div style="background-color:#f11;"></div>
+    <div style="background-color:#FFDAB9;"></div>
+    <div style="background-color:#FFE4B5;"></div>
+    <div style="background-color:#FFEFD5;"></div>
+    <div style="background-color:#FFC0CB;"></div>
   </div>
 
-  <h3>Example 2</h3>
+  <h3><center>Text that is changed after user does something</center></h3>
   <div class="example2">
-    <div style="background-color:#eee;">pizza</div>
+    <div style="background-color:#FFFACD;">light</div>
   </div>
    
-  <h3>Example 3</h3> 
+  <h3><center>An element that changes in style after user does something</center></h3> 
   <div class="example3">
-    <div style="background-color:orange;"></div>
+    <div style="background-color:	#FFDAB9;"></div>
+   
   </div>
    
   <script>
@@ -50,12 +51,12 @@
   
   // Example two: change text inside box on click
   $( ".example2 div" ).click(function() {
-    $( this ).html( "soda" );
+    $( this ).html( "yellow" );
   });
   
   // Example three: prepend on click
   $( ".example3 div" ).click(function() {
-    $( this ).prepend( "<img src='http://icons.iconarchive.com/icons/sonya/swarm/128/Pizza-icon.png'>" );
+    $( this ).prepend( "<img src='http://icons.iconarchive.com/icons/sonya/swarm/256/Ice-Cream-icon.png'>" );
   });
   </script>
    
