@@ -1,0 +1,32 @@
+
+<html>
+	<head>
+		<title>100 numbers</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<script>
+			/* global $ */
+            $("body").css("background-color","#eee");
+            
+            for (var i=0; i < 100; i++) {
+                $("body").append("<div class='dot'></div>");
+            }
+            
+            var visibility = 0;
+            var myCounter = 1;
+            
+            $(".dot").each(function() {
+               $(this).css("opacity", visibility/100);
+               $(this).html(myCounter);
+               $(this).css("height",myCounter+100);
+               $(this).css("width",myCounter+100);
+               $(this).css("top",Math.floor(Math.random()*$(window).height()*0.75));
+               $(this).css("left",Math.floor(Math.random()*$(window).width()*0.75));
+               $(this).css("font-size",Math.floor(Math.random()*$(window).width()*0.75));
+               myCounter++;
+               visibility++;
+            });
+		</script>
+	</body>
+</html>
