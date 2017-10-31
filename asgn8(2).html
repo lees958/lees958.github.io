@@ -1,0 +1,83 @@
+ <script>
+    // ORIGINAL DICE ROLLER CODE, KEEP JUST IN CASE!!!//
+      function rollDice(){
+        var numDice = document.getElementById("diceNum").value;
+        var status = document.getElementById("status");
+        var d1 = Math.floor(Math.random() * 6) + 1;
+        var diceRoll = d1;
+
+        var container = document.getElementById("diceNum").value;
+
+        for (var i = 0; i < diceNum.value; i++){
+          //LOOP THROUGH APPHENDED INPUT VALUE AND POPULATE CONTAINER DIV//
+          container.innerHTML = '<div class="dice">+diceRoll+</div>';
+        };
+        numDice.innerHTML = diceRoll;
+        status.innerHTML = "You rolled "+diceRoll+".";+
+      };
+
+
+    // DICE ROLLER V(1.1 MOD) //
+      function showdice() {
+        var dicenum = prompt("how many dice would you like to roll?");
+        var diceint = Math.round(dicenum);
+        var diceroll, results = '';
+
+        if (diceint >= "50") {
+          alert("we don't have that many dice");
+        }
+
+        else if (diceint <= "0") {
+          alert("you need to roll at least one die");
+        }
+
+        else
+          for (i = 1; i <= diceint; i++) {
+            diceroll = Math.ceil(Math.random() * 6);
+            results += diceroll + ',';
+          }
+          alert(results);
+      }
+
+
+    // DICE ROLLER V(1.2 MOD) //
+      function showdice() {
+        var dicenum = prompt("how many dice would you like to roll?");
+        var diceint = Math.round(dicenum);
+        var results = [];
+
+        if (diceint >= "50") {
+          alert("we don't have that many dice");
+        }
+
+        else if (diceint <= "0") {
+          alert("you need to roll at least one die");
+        }
+
+        else
+          for (i = 0; i < diceint; i++) {
+            results[i] = Math.ceil(Math.random() * 6);
+          }
+          alert(results.join(', '));
+        }
+    </script>
+  </head>
+
+  <body>
+    <br/><br/><br/>
+
+      <form class="" action="index.html" method="post">
+        <h4>Choose number of dice to roll</h4>
+        <p>[1 - 40]</p>
+        <br/>
+        <input id="diceNum" type="text" name="DiceNumber" placeholder="">
+        <br/>
+      </form>
+
+      <br/><br/>
+
+      <div id="dieContainer" class="dice">0</div>
+      <br/><br/>
+      <button onclick="rollDice()" style="margin-left: 20px; margin-right: 20px;">Roll Dice</button>
+      <h2 id="status" style="clear:left;"></h2>
+  </body>
