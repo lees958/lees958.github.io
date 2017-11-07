@@ -1,20 +1,19 @@
 <html>
 <body>
 
+<h1>JavaScript Math.random() assignment </h1>
+
+<p>Every time you click the button, getRndInteger(min, max) returns a random number between 1 and 100 (both included):</p>
+
+<button onclick="document.getElementById('demo').innerHTML = getRndInteger(1,100)">Click this button</button>
+
 <p id="demo"></p>
 
 <script>
-var foods = ["pizza", "pancake", "hamburger", "sandwhich"];
-var i = 2;
-var len = foods.length;
-var text = "";
-
-for (; i < len; i++) {
-    text += foods[i] + "<br>";
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-
-document.getElementById("demo").innerHTML = text;
 </script>
-<a href="asgn8(2).html"> Link for Assignment 8 (2) </a>
+
 </body>
 </html>
