@@ -1,0 +1,78 @@
+
+<html>
+	<head>
+		<title>Pizza form</title>
+		<style>
+			form {
+				font-family: verdana;
+			}
+			label {
+				font-weight: bold;
+				display: inline-block;
+    			margin-bottom: 5px;
+			}
+			p {
+				margin: 0;
+			}
+			input, textarea, select {
+				border: 1px solid #B2DFEE;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<form action="http://www.example.com/login/"
+			method="post">
+			<label for="username">Username:</label>
+			<input type="text" name="username"
+			required=<a href="required"/> <br />
+			<label for="password">password:</label>
+			<input type="password" name="password"
+			required=<a href="required" />
+			<input type ="submit" value="submit" />
+		</form>
+		<form id="chipotle menu">
+		  <p><label id="name">your name: <input id="namefield" name="your name"></label></p>
+		  <p><label>Telephone: <input type="tel" name="phone"></label></p>
+		  <p><label>E-mail address: <input type="email" name="addr" placeholder="@newschool.edu"></label></p>
+		  <p><label>Size:
+		      <select name="Menu">
+		        <option value="">Choose your favorite menu!</option>
+		        <option value="Burrito">Burrito</option>
+		        <option value="Bowl">Bowl</option>
+		        <option value="Crispy corn tacos">Crispy corn tacos</option>
+		      </select>
+		    </label>
+		  </p><p><label>Preferred delivery time:
+		      <input name="due" type="time" min="11:00" max="21:00" step="900">
+		  </label></p>
+		  <p><label>Delivery instructions:
+		      <textarea rows="3" cols="30" name="instructions">Let me know if you need anything! </textarea>
+		  </label></p>
+		  <p><button onclick="store()" type="button">Submit order</button><button onclick="clearData()" type="button">Clear data</button></p>
+		  <action="http://www.example.org/search.php">
+		  	<p>Search:</p>
+		  	<input type="search" name="search"
+		  	placeholder="Enter keyword" />
+		  	<input type="submit" value="search"/>
+		  </action>
+		</form>
+		
+		<script>
+			/* global $ */
+			/* global localStorage */
+		    function store(){
+    			localStorage.setItem("name", $("#namefield")[0].value);
+    			location.reload(); // refresh the page
+    		}
+    		function clearData() {
+    			localStorage.clear();
+    			location.reload(); // refresh the page
+    		}
+    		if (localStorage.getItem("name")) {
+    			$("#namefield").hide();
+    			$("#name").append(localStorage.getItem("name"));
+    		}
+		</script>
+	</body>
+</html>
