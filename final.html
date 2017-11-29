@@ -30,9 +30,29 @@ body, html {
 }
 
 /* Second image (Portfolio) */
+ button {
+   background-color:white;
+   border:none;
+   color:black;
+   padding:16px 32px;
+   text-align:center;
+   text-decoration:none;
+   display:inline-block;
+   font-size:16px;
+   margin: 4px 2px;
+   transition-duration:0.4s;
+   cursor:pointer;
+ }
+ button_portfolio {
+   background-color:white;
+   color:black;
+   border:2px solid; #55555;
+   
+ }
 .bgimg-2 {
     background-image: url("/w3images/parallax2.jpg");
     min-height: 400px;
+  
 }
 
 /* Third image (Contact) */
@@ -164,11 +184,11 @@ Skills and talents</p>
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Preservation of beauty">
+     <button class="button_portfolio">Preservation of beauty</button>
     </div>
 
     <div class="w3-col m3">
-      <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Insight to my dream land">
+     <button class="button_portfolio">Insight to my dream land</button>
     </div>
 
     <div class="w3-col m3">
