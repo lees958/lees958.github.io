@@ -49,7 +49,6 @@ body, html {
    background-color:white;
    color:black;
    border:2px solid; #55555;
-   
  }
 .bgimg-2 {
     background-image: url("/w3images/parallax2.jpg");
@@ -72,6 +71,11 @@ body, html {
         background-attachment: scroll;
     }
 }
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
 </style>
 <body>
   
@@ -252,14 +256,25 @@ Skills and talents</p>
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
       <!-- Add Google Maps -->
-      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> New York, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 703 606 0262<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: lees958@newschool.edu<br>
-      </div>
+     <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCocAAJq-q_TR4zEjjj_-qpdS1vU8bbt4c&parameters&callback=initMap">
+    </script>
+    
       <p><right>Would like a cup of <i class="fa fa-coffee"></i>,feel free to leave me a note:</right></p>
       <form action="/action_page.php" target="_blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
@@ -295,20 +310,21 @@ Skills and talents</p>
  
 <!-- Add Google Maps -->
 <script>
-function myMap()
+  function initMap() {
+  }
+</script>
 {
-  myCenter=new google.maps.LatLng(41.878114, -87.629798);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+<script>
+  
+</script>
+  {
+var uluru = {lat: -25.363, lng: 131.044};
 
-  var marker = new google.maps.Marker({
-    position: myCenter,
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: uluru
   });
-  marker.setMap(map);
+
 }
 
 // Modal Image Gallery
@@ -327,6 +343,10 @@ function myFunction() {
     } else {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
     }
+var marker = new google.maps.Marker({
+  position: uluru,
+  map: map
+});
 }
 
 
@@ -339,7 +359,6 @@ function toggleFunction() {
     }
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 
 </body>
-</html>
+</html> 
