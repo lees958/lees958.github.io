@@ -1,38 +1,26 @@
-
-<!doctype html>
+<!Doctype html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-</head>
 <style>
-#digit {
-  width: .5em;
-  overflow: hidden;
-  font: 32px san-serif;
-  cursor: pointer;
+#myContainer {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
 }
-
-#stripe {
-  display: inline-block
-}
-
-#stripe.animate {
-  transform: translate(-90%);
-  transition-property: transform;
-  transition-duration: 9s;
-  transition-timing-function: linear;
+#myAnimation {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
 }
 </style>
-
 <body>
 
-  Click below to animate:
+<h1>My First JavaScript Animation</h1>
 
-  <div id="digit"><div id="stripe">0123456789</div></div>
+<div id="myContainer">
+<div id="myAnimation"></div>
+</div>
 
-  <script src="script.js"></script>
 </body>
-
 </html>
