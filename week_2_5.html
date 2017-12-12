@@ -1,70 +1,43 @@
 <!DOCTYPE html>
 <head>
-  <title>Animation</title>
-  <link rel="stylesheet" type="text/css" href="final_demo.css"/>
+  <title>type animation</title>
+  
 </head>
 <style>
-  body{
-  background-color:#2c2c2e;
-  }
-
-.container{
-   position: absolute;
-   top:50%;
-   left:50%;
-}
-
-li{
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-}
-
-.square1{  background-color:#ff6666; position: relative; top:0px;
-          -webkit-animation: upDown 2s infinite linear;
-                    -webkit-animation-delay:0.5s;}
-
-.square2{  background-color:#ffcc66; position: relative; top:0px;
-          -webkit-animation: upDown 2s infinite linear;
-          -webkit-animation-delay:1s;}
-.square3{  background-color:#339966; position: relative; top:0px;
-          -webkit-animation: upDown 2s infinite linear;
-          -webkit-animation-delay:1.5s;}
-.square4{  background-color:#6699cc; position: relative; top:0px;
-          -webkit-animation: upDown 2s infinite linear;
-           -webkit-animation-delay:2s;}
-
-
-@-webkit-keyframes upDown {
-    0% {
-        top:0;    
-        }
-    20% {
-        top:-10px;    
-        }
-    40% {
-        top: -25px;    
-        }
-  
-
-    60% {
-        top:0px;    
-        }
-  100% {
-        top:0px;    
-        }
+  body {
+  background: #f9d3c9;
+  color: #333;
+  font: normal 17px "cabin sketch";
 
 }
+
+#thumbnails {
+  margin: 5em auto;
+  padding: 2px 50px 20px 20px;
+  color:#988580;
+  border:1px solid #988580;
+  width: 9px;
+}
+
+#cursor {
+  -webkit-animation: blink 1.2s step-end infinite;
+     -moz-animation: blink 1.2s step-end infinite;
+      -ms-animation: blink 1.2s step-end infinite;
+       -o-animation: blink 1.2s step-end infinite;
+          animation: blink 1.2s step-end infinite;
+}
+
+
+@-webkit-keyframes blink {0% {color: #988580} 50% {color: transparent;}}
+   @-moz-keyframes blink {0% {color: #988580} 50% {color: transparent;}}
+    @-ms-keyframes blink {0% {color: #988580} 50% {color: transparent;}}
+     @-o-keyframes blink {0% {color: #988580} 50% {color: transparent;}}
+        @keyframes blink {0% {color: #988580} 50% {color: transparent;}}
 </style>
 <body>
-  <div class="container">
-<ul>
-  <li class="square1"></li>
-  <li class="square2"></li>
-  <li class="square3"></li>
-  <li class="square4"></li>
- </ul>
+  <body>
+  <p id="thumbnails">This is Chloe! <span id="cursor" >|</span></p>
+</body>
 
-</div>
 </body>
 </html>
