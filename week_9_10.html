@@ -1,27 +1,71 @@
-<!DOCTYPE html>
 <html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script> 
-$(document).ready(function(){
-    $("button").click(function(){
-        $("div").animate({
-            left: '300px',
-            opacity: '0.5',
-            height: '150px',
-            width: '150px'
-        });
-    });
-});
-</script> 
-</head>
 <body>
-
-<button>Start Animation</button>
-
-<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
-
-<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
-
+  <div id="wrapper">
+  <div id="inputs">
+  <div>
+<center><form name="input" action="#" method="post">
+  <h1>Make your own salad!</h1>
+  <center><img src="http://www.lyhyxx.com/data/out/104/4708738-salad-wallpapers.jpg" width=300 height=200></center>
+  <bar> <none>
+  </none></bar>
+  
+  First name: <input type="text" name="firstname" placeholder="Chloe"><br/>
+  Last name: <input type="text" name="lastname" placeholder="Lee"><br/>
+  Address:<input type="email" name="email" placeholder="510 main street, NY">
+ <br/>
+    <p>Pizza toppings (Check all that apply)</p>
+    <input type='checkbox' checked> 
+    <input type='checkbox'> Egg
+    <input type='checkbox'> Tomato
+    <input type='checkbox'> Avcocado
+    <input type='checkbox'> Chicken
+    <input type='checkbox'> Onion
+    <input type='checkbox'> Walnuts 
+    <input type='checkbox'> Lettuce
+    <input type='checkbox'> Celery
+    <input type='checkbox'>
+    
+    <p>Comments:</br></p>
+	  <textarea></textarea>
+	  <p></p>
+  <input type="submit" value="Submit" href="#">
+</form>
+</div>
+</div>
 </body>
+<style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Patrick+Hand+SC|Waiting+for+the+Sunrise);
+body{
+  font-family:Patrick Hand SC;
+  font-size:25px;
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs5FtRG4p7xaINAsAJvCHPI6pwOsn3_SIupRyiZxWtG9ubWAzm');
+  background-size:cover;
+}
+h1{
+  font-family:Cabin Sketch;
+  font-size:80px;
+}
+form{
+  background-color:#211e1e;
+  color:white;
+  border-radius:5px;
+  height:auto;
+  width:450px;
+}
+#wrapper{
+  margin-top:-50px;
+ float: inherit;
+}
+input{
+  font-family:cabin sketch;
+  font-size:17px;
+  font-weight:bold;
+}
+</style>
+</div>
+
+		<div class="footer"> 
+			<p class="copy">Copy Right Chloe Lee</p>
+		</div>
+		
 </html>
